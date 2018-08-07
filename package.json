@@ -1,0 +1,47 @@
+{
+  "name": "react-material-skeleton",
+  "version": "0.1.0",
+  "description": "A bare bones project utilizing React and Material-UI.",
+  "author": "Zachary Sierakowski",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "webpack-dev-server --progress --hot --config webpack",
+    "build": "webpack --progress --config webpack",
+    "prettier": "prettier --write 'src/**/*.js'"
+  },
+  "keywords": [
+    "React",
+    "react",
+    "react.js",
+    "Material-UI",
+    "material-ui",
+    "sass",
+    "webpack",
+    "webpack-dev-server"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "@babel/preset-react": "^7.0.0-beta.56",
+    "babel-loader": "^8.0.0-beta",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "prettier": "^1.14.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.4.3",
+    "@material-ui/icons": "^2.0.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-hot-loader": "^4.3.4"
+  }
+}
