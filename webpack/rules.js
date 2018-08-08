@@ -1,4 +1,4 @@
-const { NODE_MODULES, IMAGES, SRC } = require("./constants");
+const { NODE_MODULES, ASSETS, SRC } = require("./constants");
 
 module.exports = [
   {
@@ -17,7 +17,7 @@ module.exports = [
   },
   {
     test: /\.(png|gif|jpg|svg|otf|eot|ttf|woff|woff2)$/,
-    include: [IMAGES],
+    include: [ASSETS],
     use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]"
   }
 ];

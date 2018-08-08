@@ -1,3 +1,3 @@
-# react-material-skeleton
+# react-sass-skeleton
 
-A bare bones project utilizing React and Material-UI.
+A bare bones project utilizing React, Sass and Webpack.

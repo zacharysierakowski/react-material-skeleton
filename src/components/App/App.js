@@ -1,21 +1,16 @@
-import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import React, { Fragment } from "react";
 
-import Theme from "./Theme";
+import Navbar from "../Navbar";
+import Body from "../Body";
+
+import styles from "./App.scss";
 
 const App = () => {
   return (
-    <Theme>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <Typography variant="title" color="inherit">
-            React Material Skeleton
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Theme>
+    <Fragment>
+      <Navbar />
+      <Body />
+    </Fragment>
   );
 };
 

@@ -1,7 +1,7 @@
 {
-  "name": "react-material-skeleton",
+  "name": "react-sass-skeleton",
   "version": "0.1.0",
-  "description": "A bare bones project utilizing React and Material-UI.",
+  "description": "A bare bones project utilizing React, Sass and Webpack.",
   "author": "Zachary Sierakowski",
   "license": "UNLICENSED",
   "scripts": {
@@ -13,8 +13,6 @@
     "React",
     "react",
     "react.js",
-    "Material-UI",
-    "material-ui",
     "sass",
     "webpack",
     "webpack-dev-server"
@@ -38,8 +36,6 @@
     "webpack-dev-server": "^3.1.5"
   },
   "dependencies": {
-    "@material-ui/core": "^1.4.3",
-    "@material-ui/icons": "^2.0.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-hot-loader": "^4.3.4"
