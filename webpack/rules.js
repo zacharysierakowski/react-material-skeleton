@@ -1,4 +1,5 @@
-const { NODE_MODULES, ASSETS, SRC } = require("./constants");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { NODE_MODULES, ASSETS, IS_DEVELOP, SRC } = require("./constants");
 
 module.exports = [
   {
@@ -7,17 +8,38 @@ module.exports = [
     loader: "babel-loader"
   },
   {
-    test: /\.scss$/,
+    test: /\.css$/,
+    include: NODE_MODULES,
     use: [
-      "style-loader",
-      "css-loader?importLoaders=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]",
+      IS_DEVELOP ? "style-loader" : MiniCssExtractPlugin.loader,
+      "css-loader"
+    ]
+  },
+  {
+    test: /\.(sa|sc|c)ss$/,
+    include: SRC,
+    use: [
+      IS_DEVELOP ? "style-loader" : MiniCssExtractPlugin.loader,
+      {
+        loader: "css-loader",
+        options: {
+          modules: true,
+          importLoader: 2
+        }
+      },
+      "postcss-loader",
       "sass-loader"
-    ],
-    include: [SRC]
+    ]
   },
   {
     test: /\.(png|gif|jpg|svg|otf|eot|ttf|woff|woff2)$/,
     include: [ASSETS],
-    use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]"
+    use: {
+      loader: "url-loader",
+      options: {
+        limit: 20480,
+        name: IS_DEVELOP ? "assets/[name].[ext]" : "assets/[name].[hash].[ext]"
+      }
+    }
   }
 ];

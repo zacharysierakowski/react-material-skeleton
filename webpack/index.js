@@ -3,7 +3,7 @@ const path = require("path");
 const devServer = require("./devServer");
 const plugins = require("./plugins");
 const rules = require("./rules");
-const { MODE, SRC, DIST, NODE_MODULES } = require("./constants");
+const { SRC, DIST, NODE_MODULES, MODE, IS_DEVELOP } = require("./constants");
 
 module.exports = {
   mode: MODE,
@@ -13,7 +13,7 @@ module.exports = {
   },
   output: {
     path: DIST,
-    filename: "[name]-[hash].js"
+    filename: IS_DEVELOP ? "[name].js" : "[name].[hash].js"
   },
   resolve: {
     extensions: [".js", ".jsx", ".scss"],
